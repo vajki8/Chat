@@ -21,5 +21,18 @@ namespace MessageBackend.Controllers
         {
             this.hub = hub;
         }
+
+        [HttpPost]
+        public void Create([FromBody] Message value)
+        {
+            messages.Add(value);
+            this.hub.Clients.All.SendAsync("MessageCreated", value);
+        }
+
+        [HttpGet]
+        public IEnumerable<Message> ReadAll()
+        {
+            return messages;
+        }
     }
 }
