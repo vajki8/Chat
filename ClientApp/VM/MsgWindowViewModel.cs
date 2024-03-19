@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace ClientApp.VM
 {
-    public class NameWindowViewModel
+    public class MsgWindowViewModel
     {
 
         private string enteredName;
@@ -23,7 +23,7 @@ namespace ClientApp.VM
 
         public ICommand OkCommand { get; set; }
 
-        public NameWindowViewModel(Window window)
+        public MsgWindowViewModel(Window window)
         {
             OkCommand = new RelayCommand(() => { window.DialogResult = true; }, () => { return EnteredName != null && EnteredName != ""; });
         }

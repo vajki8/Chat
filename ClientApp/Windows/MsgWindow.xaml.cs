@@ -14,14 +14,14 @@ namespace ClientApp.Windows
     /// <summary>
     /// Interaction logic for NameWindow.xaml
     /// </summary>
-    public partial class NameWindow : Window
+    public partial class MsgWindow : Window
     {
-        public NameWindowViewModel VM { get; set; }
+        public MsgWindowViewModel VM { get; set; }
 
-        public NameWindow()
+        public MsgWindow()
         {
             InitializeComponent();
-            VM = new NameWindowViewModel(this);
+            VM = new MsgWindowViewModel(this);
             this.DataContext = VM;
         }
 

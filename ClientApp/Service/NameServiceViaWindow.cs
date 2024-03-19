@@ -11,7 +11,7 @@ namespace ClientApp.Service
     {
         public string GetName()
         {
-            NameWindow nw = new NameWindow();
+            MsgWindow nw = new MsgWindow();
             nw.ShowDialog();
             return nw.VM.EnteredName;
         }
