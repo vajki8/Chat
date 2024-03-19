@@ -47,7 +47,7 @@ namespace ClientApp.VM
         {
             if (!IsInDesignMode)
             {
-                Messages = new RestCollection<Message>("http://localhost:44869/", "message", "hub");
+                Messages = new RestCollection<Message>("http://localhost:57257/", "message", "hub");
                 SendCommand = new RelayCommand(() => {
                     Messages.Add(new Message() { Sender = this.Sender, SentMessage = InputText });
                     InputText = "";
